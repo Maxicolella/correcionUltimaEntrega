@@ -1,0 +1,101 @@
+.navegador{
+    background-color: blue;
+}
+.navegador > ul{
+        list-style-type: none;
+        display: flex;
+}
+.navegador > ul > li > a{
+                text-decoration: none;
+                color: black;
+                padding: 10px 20px;
+                display: inline-block;
+                font-size: 20px;
+                position: sticky;
+                border-top: solid 1px green;
+                border-bottom: solid 1px green;        
+}
+
+.navegador > ul > li > a:hover{
+    color: green
+}
+
+.productos {
+    padding-top: 50px;
+}
+
+.titulo1{
+    margin-left: 10px;
+}
+
+.titulo2{
+    margin-left: 30px;
+}
+
+.tarjeta{
+    width: 30%;
+    border: solid 1px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    margin: 10px;
+}
+
+.tarjeta_img{
+    width: 100%;
+    position: relative;
+}
+
+.tarjeta_titulo {
+    margin: 5px;
+}
+
+.tarjeta_desc{
+    margin: 5px;
+}
+
+.tarjeta_btn{
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn{
+    width: 90px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(32, 197, 32);
+    color: white;
+    text-decoration: none;
+    text-align: center; 
+}
+
+
+.btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    line-height: 63px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+    text-decoration: none;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+        line-height: 66px;
+	}
+}

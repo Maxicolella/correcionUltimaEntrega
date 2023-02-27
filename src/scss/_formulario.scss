@@ -1,0 +1,49 @@
+.formulario{
+    background-color: blue;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+    margin-bottom: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"zona 1     zona1"
+                        "zona 2     zona3"
+                        "zona 4     zona5"
+                        "zona 6     zona6"
+                        "zona 7     zona7" ;
+    
+    @media (max-width: 800px){
+        width: 100vw;
+        margin: 20px 0px;
+        border-radius: 0px;
+        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr  1fr 1fr 60;
+        grid-template-areas:"zona 1"     
+                        "zona 2"
+                        "zona 3"
+                        "zona 4"
+                        "zona 5"
+                        "zona 6"
+                        "zona 7";    
+    }
+
+    @for $var from 1 to 10 {
+        @if ($var == 1 ){
+            h2:nth-child(#{$var}){
+                grid-area: zona#{$var};
+            }
+        }
+    @else if ($var ==7 ){
+        button:nth-child(7) {
+            grid-area: zona#{var};
+            @include boton (200px, rgb(255, 255, 255));
+        }
+    }
+
+    label input , .formulario label textarea {
+    @extend %input
+    }
+}
